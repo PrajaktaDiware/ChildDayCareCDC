@@ -18,11 +18,13 @@ namespace Layer1.WEB.App_Start
             CreateMap<CStudent, CStudentViewModel>();
             CreateMap<CStudentViewModel, CStudent>();
 
+            //Prajakta
             CreateMap<AddStudent, AddStudentViewModel>();
             CreateMap<AddStudentViewModel, AddStudent>();
 
-            CreateMap<ProfileStudent, ProfileStudentViewModel>();
-            CreateMap<ProfileStudentViewModel, ProfileStudent>();
+            //Alpit
+            CreateMap<AddStudent, ProfileStudentViewModel>();
+            CreateMap<ProfileStudentViewModel, AddStudent>();
 
             CreateMap<ProfileClass, ProfileClassViewModel>();
             CreateMap<ProfileClassViewModel, ProfileClass>();

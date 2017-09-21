@@ -56,13 +56,13 @@
     <Compile Include="Infrastructure\IDbFactory.cs" />
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
-    <Compile Include="Migrations\201709150825592_Initial1.cs" />
-    <Compile Include="Migrations\201709150825592_Initial1.Designer.cs">
-      <DependentUpon>201709150825592_Initial1.cs</DependentUpon>
+    <Compile Include="Migrations\201709201252283_Initial1.cs" />
+    <Compile Include="Migrations\201709201252283_Initial1.Designer.cs">
+      <DependentUpon>201709201252283_Initial1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201709151100166_Initial2.cs" />
-    <Compile Include="Migrations\201709151100166_Initial2.Designer.cs">
-      <DependentUpon>201709151100166_Initial2.cs</DependentUpon>
+    <Compile Include="Migrations\201709210427081_ChildGenderAdded.cs" />
+    <Compile Include="Migrations\201709210427081_ChildGenderAdded.Designer.cs">
+      <DependentUpon>201709210427081_ChildGenderAdded.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,11 +80,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201709150825592_Initial1.resx">
-      <DependentUpon>201709150825592_Initial1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201709201252283_Initial1.resx">
+      <DependentUpon>201709201252283_Initial1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201709151100166_Initial2.resx">
-      <DependentUpon>201709151100166_Initial2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201709210427081_ChildGenderAdded.resx">
+      <DependentUpon>201709210427081_ChildGenderAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

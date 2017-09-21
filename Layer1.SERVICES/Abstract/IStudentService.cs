@@ -8,16 +8,8 @@ using System.Threading.Tasks;
 
 namespace Layer1.SERVICES.Abstract
 {
-    /// <summary>
-    /// The Student Service Interface
-    /// </summary>
     public interface IStudentService
     {
-        /// <summary>
-        /// Get the Student By Identifier
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
         CStudentViewModel GetStudentById(long id);
 
         List<CStudentViewModel> GetAllStudents(CStudentViewModel model);

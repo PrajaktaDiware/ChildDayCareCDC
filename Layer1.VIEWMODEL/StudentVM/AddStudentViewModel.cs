@@ -12,6 +12,7 @@ namespace Layer1.VIEWMODEL.StudentVM
         public long Id { get; set; }
         public string ChildFirstName { get; set; }
         public string ChildLastName { get; set; }
+        public string ChildGender { get; set; }
         public DateTime? DOB { get; set; }
 
         //ParentInfo

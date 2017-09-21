@@ -15,6 +15,8 @@ namespace Layer1.SERVICES.Services
     public class StudentService : IStudentService
     {
 
+
+
         private readonly IEntityBaseRepository<CStudent> _StudentRepository;
      
         private readonly IUnitOfWork _unitOfWork;

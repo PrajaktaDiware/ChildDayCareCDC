@@ -14,8 +14,6 @@ using System.Web.Http.Cors;
 namespace Layer1.WEB.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-  
-    
     public class LoginController : ApiController
     {
         
@@ -26,11 +24,7 @@ namespace Layer1.WEB.Controllers
             _iStudentService = iStudentService;
         }
 
-        /// <summary>
-        /// Login the User
-        /// </summary>
-        /// <param name="loginDetails"></param>
-        /// <returns></returns>
+
         //Alpit
         // GET: api/Login/
         [HttpPost]
@@ -39,7 +33,6 @@ namespace Layer1.WEB.Controllers
         {
             try
             {
-                //mkdfmjlsxk
                 var alluser = _iStudentService.GetAllStudentsWithoutParam();
                 var user = alluser.FirstOrDefault(a => a.Name == loginDetails.Name);
 
@@ -52,7 +45,7 @@ namespace Layer1.WEB.Controllers
                                   
                 if (loginDetails.Password==pass)
                 {
-                   //rteted
+
                     if (loginDetails == null)
                         return Unauthorized();
 

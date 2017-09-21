@@ -12,29 +12,21 @@ using System.Web.Http.Cors;
 namespace Layer1.WEB.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-
-    /// <summary>
-    /// </summary>
-    /// <seealso cref="System.Web.Http.ApiController" />
     public class StudentController : ApiController
     {
         private readonly IAddStudentService _iAddStudentService;
 
-        /// <summary>
-        ///   Initializes a new instance of the <see cref="StudentsController" /> class.
-        /// </summary>
-        /// <param name="iAddStudentService"></param>
         public StudentController(IAddStudentService iAddStudentService)
         {
             _iAddStudentService = iAddStudentService;
         }
 
-        //prajkta
         /// <summary>
         /// Get all the student data from databse
         /// </summary>
         /// <returns></returns>
 
+        // GET: api/Home
         [HttpGet]
         [Route("api/Student/")]
         public IHttpActionResult GetAllStudent()
@@ -50,6 +42,7 @@ namespace Layer1.WEB.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
 
+        // GET: api/Home/5
         [HttpGet]
         [Route("api/Student/{id}")]
         public IHttpActionResult GetById(long id)
@@ -64,6 +57,8 @@ namespace Layer1.WEB.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
 
+        //[Authorize]
+        // POST: api/Home
         [Route("api/Student/")]
         [HttpPost]
         public IHttpActionResult Post([FromBody] AddStudentViewModel model)
@@ -84,13 +79,13 @@ namespace Layer1.WEB.Controllers
         /// <param name="id"></param>
         /// <param name="model"></param>
         /// <returns></returns>
-        
         [Route("api/Student/{id}")]
         [HttpPut]
         public IHttpActionResult Put(long id, [FromBody] AddStudentViewModel model)
         {
             try
             {
+
                 if (!ModelState.IsValid)
                     return BadRequest();
                 //var a= _iAddStudentService.UpdateStudent(id, model);
@@ -104,15 +99,10 @@ namespace Layer1.WEB.Controllers
             }
         }
 
-        /// <summary>
-        /// Delete the Student by Identifier
-        /// </summary>
-        /// <param name="Id"></param>
-        /// <returns></returns>
-       
-        [Route("api/Student/{id}")]
+        
         [HttpDelete]
-        public IHttpActionResult DeleteStudentById( long Id)
+        [Route("api/Student/{id}")]
+        public IHttpActionResult DeleteStudentById(long Id)
         {
             var a = _iAddStudentService.DeleteStudent(Id);
 
